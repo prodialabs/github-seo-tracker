@@ -26,10 +26,12 @@ def convert_to_csv(keywords, output_file, token):
         for keyword in keywords:
             top_repos = get_top_repos(keyword, token)
             row = [keyword] + top_repos
+            print(f"Writing row: {row}")  # Add this line to print the row contents
             csv_writer.writerow(row)
 
+
 def main():
-    token = "YOUR_PERSONAL_ACCESS_TOKEN"
+    token = "YOUR-TOKEN"
     keywords = bulk_upload_keywords("keywords.txt")
     convert_to_csv(keywords, "github_search_results.csv", token)
 
