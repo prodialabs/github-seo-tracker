@@ -1,6 +1,7 @@
 import requests
 import csv
 import json
+import os
 
 def get_top_repos(keyword, token):
     api_url = f"https://api.github.com/search/repositories?q={keyword}&sort=stars&order=desc&per_page=10"
@@ -29,10 +30,11 @@ def convert_to_csv(keywords, output_file, token):
             print(f"Writing row: {row}")  # Add this line to print the row contents
             csv_writer.writerow(row)
 
-
 def main():
-    token = "YOUR-TOKEN"
-    keywords = bulk_upload_keywords("keywords.txt")
+    token = "YOUR-PERSONAL-TOKEN"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, "keywords.txt")
+    keywords = bulk_upload_keywords(file_path)
     convert_to_csv(keywords, "github_search_results.csv", token)
 
 if __name__ == "__main__":
