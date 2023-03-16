@@ -1,7 +1,7 @@
 # Github SEO Tracker
 Track the top 10 results for a particular keyword in github search
 
-This Repo Used GPT to create this tool using the prompt
+This Repo Used GPT4 to create this tool using the prompt
 
 You are an AI Programming assistant.
 
@@ -16,4 +16,6 @@ Write me a tool that to track search results on Github in Python 3
 - Support bulk upload of keywords
 - Convert the results into a csv where the first column is the keyword and the next 10 columns are the github repo in decending order
 
-And then a few back and forth conversations getting it to include the API key
+And then a few back and forth conversations getting it to include data/time and better understanding of file structure (this could have been done in the first step with a better prompt)
+
+Remember to replace YOUR_PERSONAL_ACCESS_TOKEN with your actual personal access token that you generated from your GitHub account.
