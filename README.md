@@ -1,7 +1,7 @@
 # Github SEO Tracker
 Track the top 10 results for a particular keyword in github search
 
-This Repo Used GPT4 to create this tool using the prompt
+This repo used GPT4 to create this tool using the prompt
 
 You are an AI Programming assistant.
 
